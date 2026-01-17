@@ -8,7 +8,7 @@
 // const population = (8000000000 / 2)+1
 // const isIsland = false ; 
 // let language;
-// const description =  country + 'is in ' + continent
+// const description =  country + 'is in ' + continent  `${country}+ 'is in' + "Continent"`
 // language = 'english'
 
 
@@ -27,18 +27,33 @@
    
 // console.log(description)
 
-const john_mass = 92 ;
-const john_height = 1.95;
+// const john_mass = 92 ;
+// const john_height = 1.95;
 
-const johnBMI = john_mass/ john_height**2
+// const johnBMI = john_mass/ john_height**2
 
 
-const mark_mass = 78 ;
-const mark_height = 1.69;
+// const mark_mass = 78 ;
+// const mark_height = 1.69;
 
-const markBMI = (mark_mass)/ mark_height**2
+// const markBMI = (mark_mass)/ mark_height**2
+// // console.log(markBMI,johnBMI,markHigherBMI)
+
+// markHigherBMI  = johnBMI > markBMI
+
 // console.log(markBMI,johnBMI,markHigherBMI)
 
-markHigherBMI  = johnBMI > markBMI
+// const firstname = 'Mike '
+// const x = `I love you ${firstname}, and my self and my ${mark_height}`;
+// console.log(`i love you `)  // template literals 
+// console.log('I love you ')
 
-console.log(markBMI,johnBMI,markHigherBMI)
+// console.log('1. Egge \n\
+//     2.potato \n\
+//     3.rice ') // \n\ next line 
+
+// // == the same below 
+
+// console.log(`1. meat
+// 2.sausage
+// 3 rice `)
