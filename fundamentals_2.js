@@ -1,0 +1,1 @@
+'use strict'; // 'use strict' is a directive that enables strict mode in JavaScript, which makes your code safer and catches common mistakes!
