@@ -107,16 +107,3 @@ switch (day) {
 
 console.log(`i am ${90-43} years old `)
 
-
-// tip calculator
-
-bill = 275
-const tip1 = 0.15
-const tip2 = 0.2
-
-const tip = 50 <= bill <= 300 ? bill * tip1 : bill *tip2
-const messages = `bill: ${bill}
-tip: ${tip}
-total: ${tip+bill}`
-
-console.log(messages)
