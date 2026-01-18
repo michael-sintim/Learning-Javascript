@@ -91,3 +91,81 @@ const tips = [calctip(bills[0]),calctip(bills[1]),calctip(bills[2])]
 const total = [bills[0]+tips[0],bills[1]+tips[1],bills[2]+tips[2]]
 
 console.log(bills,tips,total)
+
+//objects
+const Mike = {
+  firstName: "Mike",
+  lastName: "Sintim",
+  age: 25,
+  country: "Ghana",
+  profession: "Software Developer",
+  skills: ["JavaScript", "Python", "Django", "React"],
+  isStudent: false,
+  greet() {
+    return `Hi, my name is ${this.firstName} ${this.lastName}`;
+  }
+};
+
+
+
+
+const Mark = {
+    name : 'Mark',
+    mass :78, 
+    height : 1.69, 
+    calcBMI : function (){
+        this.BMI = ((this.mass)/this.height**2).toFixed(2)
+        return this.BMI
+    }
+}
+
+const John = {
+    name : 'John',
+    mass :92, 
+    height : 1.95,
+    calcBMI :  function () {
+    this.BMI = ((this.mass)/(this.height**2)).toFixed(2)
+    
+    return this.BMI } 
+}
+
+Mark.calcBMI()
+John.calcBMI()
+
+console.log(Mark['BMI']) 
+console.log(John['BMI']) 
+
+const qw = Mark['BMI'] > John['BMI'] ?   `Mark miller's ${Mark['BMI']} is greater than John's ${John['BMI']} BMI` :
+`John 's ${John['BMI']} is greater than Mark's ${Mark['BMI']} BMI`
+
+console.log(qw)
+
+// loops 
+
+// for (let rep = 1; rep  <= 10; rep++ ){
+//     console.log(`I am counting from ${rep} to ten `)
+// }
+
+// for ( let i=0 ; ;i++){
+//     console.log(Mike[i])
+// }
+
+const calctips = (bills) => {
+    
+    return   (50 <= bills <= 300 )? bills *.15: bills *.20
+}
+
+
+const  bywe = [22,34,55,45,66,23,12,12,44,46];
+const tp = [];
+const sl = [];
+
+for (let i = 0;i < bywe.length;i++){
+    const tipp = calctips(bywe[i]).toFixed(2);
+    tp.push(tipp).toFixed(2);
+    sl.push(tipp+bywe[i]).toFixed(2);
+
+}
+
+console.log(bywe,tp,sl)
+ 
