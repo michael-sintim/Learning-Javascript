@@ -77,3 +77,17 @@ forEach() - Loop Through Each
 find() - Get First Match
 sort() - Sort Elements
  */
+
+
+
+const calctip = (bills) => {
+    
+   return 50 <= bills <= 300 ? bills *.15: bills *.20
+}
+
+
+const bills = new Array(555,44,125)
+const tips = [calctip(bills[0]),calctip(bills[1]),calctip(bills[2])]
+const total = [bills[0]+tips[0],bills[1]+tips[1],bills[2]+tips[2]]
+
+console.log(bills,tips,total)
