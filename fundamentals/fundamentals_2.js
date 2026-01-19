@@ -170,3 +170,6 @@ for (let i = 0;i < bywe.length;i++){
 console.log(bywe,tp,sl)
  
 
+const printForecast = (arr) => {
+    
+}
