@@ -12,10 +12,14 @@ document.querySelector('.guess').value   = 21 // to read the value
 
 */
 
-const SECRET_number = Math.trunc(Math.random()*20 )+1
+let SECRET_number = Math.trunc(Math.random()*20 )+1
 let score = 20
+let hightscore = 0 
 
-document.querySelector('.number').textContent = SECRET_number 
+const displayMessage = (message) =>{
+    document.querySelector('.message') = message
+}
+// document.querySelector('.number').textContent = SECRET_number 
 
 document.querySelector('.check').addEventListener('click',
      () => {
@@ -23,7 +27,8 @@ document.querySelector('.check').addEventListener('click',
         console.log(guess); 
 
         if (!guess){
-            document.querySelector('.message').textContent = 'No Number'
+            // document.querySelector('.message').textContent = 'No Number'
+            displayMessage('No number')
 
         }else if (guess === SECRET_number){ 
             document.querySelector('body').style = 'background:#60b347';
@@ -31,22 +36,27 @@ document.querySelector('.check').addEventListener('click',
             // document.querySelector('.number').style.width = '30rem';
             document.querySelector('.number').textContent = SECRET_number 
 
-
+            if (score > hightscore){
+                hightscore = score
+                document.querySelector('.highscore').textContent = hightscore
+            }
             document.querySelector('.message').textContent = "Correct number"
-        }else if (guess > SECRET_number){
-            if (score > 0){
-             document.querySelector('.message').textContent = "You guess is greater than the hidden number"
-             score--
-             document.querySelector('.score').textContent = score }
-             else (document.querySelector('.message').textContent = 'You lose')
+        }else if (guess!==SECRET_number){
+
         
-        }else if (guess < SECRET_number){
-            if (score > 0){
-             document.querySelector('.message').textContent = "You guess is lesser than the hidden number"
-             score--
-             document.querySelector('.score').textContent = score }else (document.querySelector('.message').textContent = 'You lose')
-         
-         
+        
+               if (score > 0){
+                document.querySelector('.message').textContent = guess > SECRET_number ? "You guess is greater than the hidden number":
+                "You guess is lesser than the hidden number"
+                score--
+                document.querySelector('.score').textContent = score }
+                else {
+                    document.querySelector('.message').textContent = 'You lose';
+                    document.querySelector('.score') = 0;
+                }
+        
+        
+        
         }
     
     } 
@@ -54,7 +64,7 @@ document.querySelector('.check').addEventListener('click',
 
 document.querySelector('.again').addEventListener('click',
     () => {
-        const SECRET_number = Math.trunc(Math.random()*20 )+1       
+         SECRET_number = Math.trunc(Math.random()*20 )+1       
         document.querySelector('.number').textContent = SECRET_number 
 
         // document.querySelector('.number').style = 'width:30rem';
