@@ -79,52 +79,65 @@ document.querySelector('.guess').value   = 21 // to read the value
 // )
 
 
-let secret_number = Math.trunc(Math.random()*(1,20))+1 ;
-let SCORE = 20 ;
-let HIGHSCORE = 20
+    let secret_number = Math.trunc(Math.random()*20)+1 ;
+    let SCORE = 20 ;
+    let HIGHSCORE = 20
 
-const CHECK = document.querySelector('.check')
-document.querySelector('.number').textContent = secret_number;
+    const CHECK = document.querySelector('.check')
+    document.querySelector('.number').textContent = secret_number;
 
 
 
-CHECK.addEventListener('click',
-    () => {
-        // alert('this button works ')
+    CHECK.addEventListener('click',
+        () => {
+            // alert('this button works ')
 
-const GUESS = Number(document.querySelector('.guess').value)
+    const GUESS = Number(document.querySelector('.guess').value)
 
-const Message =  (e) => {
-    document.querySelector('.message').textContent = e
-}
-
-    if (!GUESS || GUESS < 1){
-        alert('Invalid Input')
+    const Message =  (e) => {   
+        document.querySelector('.message').textContent = e
     }
-        else if ( GUESS === secret_number){
-            console.log('Correct guess')
-            document.querySelector('body').style.background = 'green'
-            Message('You are right!!!') 
-            document.querySelector('.number').style.width = '30rem'
 
-        } else if (GUESS < secret_number && GUESS > 1){
-            Message('Too Low!!!')
-            document.querySelector('.score').textContent = SCORE--;
-
-
-        }else {
-            Message('Too High!!!')
-            document.querySelector('.score').textContent = SCORE--;
+        if (!GUESS || GUESS < 1){
+            alert('Invalid Input')
         }
-    }
-)
+            else if ( GUESS === secret_number){
+                console.log('Correct guess')
+                document.querySelector('body').style.background = 'green'
+                Message('You are right!!!') 
+                document.querySelector('.number').style.width = '30rem'
+
+            } else if (GUESS < secret_number && SCORE > -1){
+                Message('Too Low!!!')
+                document.querySelector('.score').textContent = SCORE--;
+                if (SCORE ===    -1){
+                    Message('YOU LOSE')
+                }
+
+            }
+            else if (GUESS > secret_number && SCORE > -1   ){
+                Message('Too high!!!')
+                document.querySelector('.score').textContent = SCORE--; 
+                if (SCORE === -1){
+                    Message('YOU LOSE')
+                }
+
+                }    if(SCORE > HIGHSCORE){
+                    HIGHSCORE = SCORE
+                    document.querySelector('.highscore').textContent = HIGHSCORE
+                    console.log(HIGHSCORE)
+                }
+        
+        } 
+    )
 
 
-const AGAIN = document.querySelector('.again')
+    const AGAIN = document.querySelector('.again')
 
-AGAIN.addEventListener('click',
-    () =>{
-        document.querySelector()
-    }
-)
-console.log(secret_number)
+    AGAIN.addEventListener('click',
+        () =>{
+            document.querySelector()
+        }
+    )
+    console.log(secret_number)
+            
