@@ -91,6 +91,21 @@ console.log(rest)
 const menu = [...restaurant.mainMenu,...restaurant.starterMenu]
 console.log(menu)
 
+// rest operator 
+const [a1,b1,...otherss] = [1,2,3,4,5,6]
+console.log(a1,b1,otherss)
+
+
+const add = (...number) => {
+  let sum = 0 ;
+  for (let i = 0;i < number.length ; i++){
+    sum += number[i]
+    
+  }console.log(sum)
+}
+
+add(2,3,1,3,1)
+
 //for off loop
 for (const item of menu) console.log(item)
 
@@ -123,12 +138,16 @@ const r2 = {
   owner: 'me Boi',
 }
 
-r1.numGUests ||= 10;
+// the or operator prints the first truthy value 
+// or assignment operaor
+
+r1.numGUests ||= 10; // same as r1.numGUests =  r1.numGUests || 10
 r1.numGUests ||= 10;
 
 r1.numGUests &&= 'treason';
 r2.numGUests &&= 'treason';
 
+// nullish assignment operator
 r1.numGUests ??= 10;
 r2.numGUests ??= 10;
 
@@ -154,3 +173,54 @@ console.log(openstr)
 //.size not .length  ,.add ,.delete 
 //sets is used to remove duplicate values 
 const n_set = new Set(['Pasta','pizaa','Pasta','pizaa'])
+
+
+
+// for 0 , null or '' 
+guestsss = 0
+const xxx = guestsss ?? 10
+console.log(xxx)
+
+console.log(`\n\n---QUIZ----\n\n`)
+
+
+const game = {
+  team1: 'Bayern Munich',
+  team2: 'Borrussia Dortmund',
+  players: [
+    [
+      'Neuer',
+      'Pavard',
+      'Martinez',
+      'Alaba',
+      'Davies',
+      'Kimmich',
+      'Goretzka',
+      'Coman',
+      'Muller',
+      'Gnarby',
+      'Lewandowski',
+    ],
+    [
+      'Burki',
+      'Schulz',
+      'Hummels',
+      'Akanji',
+      'Hakimi',
+      'Weigl',
+      'Witsel',
+      'Hazard',
+      'Brandt',
+      'Sancho',
+      'Gotze',
+    ],
+  ],
+  score: '4:0',
+  scored: ['Lewandowski', 'Gnarby', 'Lewandowski', 'Hummels'],
+  date: 'Nov 9th, 2037',
+  odds: {
+    team1: 1.33,
+    x: 3.25,
+    team2: 6.5,
+  },
+};
