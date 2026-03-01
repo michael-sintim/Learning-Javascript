@@ -1,11 +1,11 @@
 
 const arrs = [1,2,3];
 
-
-let [x,y,z] = arrs
+let [x,y,z] = arrs;
+console.log(x,y,z); 
 
 [x,y,z] = [z,x,y]
-console.log(x,y,z)
+console.log(x,y,z) 
 
 
 const sra = [24,34,[11,12]]
@@ -76,13 +76,18 @@ const restaurant = {
 
 };
 
-const {name,openingHours,categories} = restaurant
+const {name,openingHours,categories} = restaurant;
 console.log(name,openingHours,categories)
 
-const arr = [1,3]
+const {name: restaurantName , openingHours: Hours,categories: 
+  n_categories} = restaurant
+
+  // SPREAD ON THE RIGHT HAND SIDE 
+const arr = [ 1,3]
 const newArr = [1,2,...arr]  // the spread operator
 const rest = [...restaurant.mainMenu,'chicken']
 
+console.log(rest)
 const menu = [...restaurant.mainMenu,...restaurant.starterMenu]
 console.log(menu)
 
