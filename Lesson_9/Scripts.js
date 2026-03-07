@@ -225,3 +225,33 @@ const game = {
   },
 };
 
+const [player1,player2] = game.players
+const [gk, ...fieldplayers] = player1
+const list_a = [...game.players[0]]
+const list_b = [...game.players[1]]
+const joined_list  = list_a + list_b
+const allPlayers = [...player1 ,...player2]
+const substitute = [',Thiago','Coutino','Perisic']
+const players1Final = [player1,...substitute]
+const {
+  odds:{team1,x: draw, team2}
+
+} =game
+console.log(players1Final)
+
+const Printgoals = (...playerNames) => {
+console.log(`${playerNames}.length goals were scored`)
+}
+
+switch (game.odds.team1){
+  case 1 : game.odds.team2 > game.odds.team1
+  console.log(`${game.odds.team1} will win`);break
+ 
+}
+
+const TeamMostLikelyToWin =  function(){
+  console.log(`$`)
+}
+
+team1 < team2 && console.log("team one would win ")
+team1 > team2 && console.log("team two would win ")
