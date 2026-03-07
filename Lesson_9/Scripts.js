@@ -255,3 +255,16 @@ const TeamMostLikelyToWin =  function(){
 
 team1 < team2 && console.log("team one would win ")
 team1 > team2 && console.log("team two would win ")
+
+
+for (const [i,player] of game.scored.entries()){
+  console.log(`Goal ${i+1}: ${player}`)
+}
+
+const odds =   Object.values(game.odds);
+let average = 0 ;
+for (const odd of odds){
+  average += odd;
+  average /= odds.length
+  console.log(average)
+}
