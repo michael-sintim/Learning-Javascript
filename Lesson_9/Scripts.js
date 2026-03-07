@@ -268,3 +268,13 @@ for (const odd of odds){
   average /= odds.length
   console.log(average)
 }
+
+// sets use the has methods (to check for items in a set), add, delete, are all methods
+const orders =  new Set(['Pasta','pizza'])
+
+for (const order of orders){
+  console.log(order)
+}
+
+
+const rest = new Map()
