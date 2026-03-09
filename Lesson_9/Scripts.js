@@ -286,3 +286,51 @@ console.log(render.get('name'))
 
 
 const times = 21;
+
+
+const quiz = new Map([['question','what is your name? '],
+  [1,'mike'],
+  [2,'joe'],
+  [3,'draymod'],
+  [4,'bob'],
+  ['correct',3],
+  [true,'correct'],
+  [false,'try again'],
+])
+
+console.log(quiz)
+
+// quiz app
+console.log(quiz.get('question'))
+
+for (const [key, value] of quiz){
+  if (typeof key === 'number'){
+    console.log(`Answer ${key}: ${value}`)
+  }
+}
+
+const answer =Number( prompt('Your answer: '))
+console.log(answer)
+if (answer === quiz.get('correct')){
+  console.log(`${quiz.get(true)}`)
+}else {
+   console.log(`${quiz.get(false)}`)
+}
+
+
+console.log([...quiz])
+
+
+const gameEvents = new Map([
+  [17, '⚽️ GOAL'],
+  [36, '🔁 Substitution'],
+  [47, '⚽️ GOAL'],
+  [61, '🔁 Substitution'],
+  [64, '🔶 Yellow card'],
+  [69, '🔴 Red card'],
+  [70, '🔁 Substitution'],
+  [72, '🔁 Substitution'],
+  [76, '⚽️ GOAL'],
+  [80, '⚽️ GOAL'],
+  [92, '🔶 Yellow card'],
+]);
