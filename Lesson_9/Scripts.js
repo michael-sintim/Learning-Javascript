@@ -278,3 +278,11 @@ for (const order of orders){
 
 
 const render = new Map()
+render.set('name','run-off')
+render.set(1,'acrra','ghana')
+render.set(2,'kumasi','ghana')
+
+console.log(render.get('name'))
+
+
+const times = 21;
