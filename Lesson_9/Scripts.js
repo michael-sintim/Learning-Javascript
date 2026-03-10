@@ -346,4 +346,12 @@ console.log(plane[0])
 console.log(airline.indexOf('r')) // first occurence
 console.log(airline.lastIndexOf('r ')) // last occurence
 console.log(airline.slice(1)) 
+console.log(airline.slice(-1)) // starts counting from the end 
 console.log(airline.slice(2,7)) //end value isnt included in the string 
+console.log(airline.slice(2,7)) //end value isnt included in the string 
+console.log(airline.slice(0,airline.indexOf(' '))) //end value isnt included in the string 
+console.log(airline.slice(0,airline.lastIndexOf(' '))) //end value isnt included in the string 
+
+const CHecktMiddleSeat = (seat) => {
+// b and e are middle sear
+}
