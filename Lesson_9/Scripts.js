@@ -300,22 +300,22 @@ const quiz = new Map([['question','what is your name? '],
 
 console.log(quiz)
 
-// quiz app
-console.log(quiz.get('question'))
+// // quiz app
+// console.log(quiz.get('question'))
 
-for (const [key, value] of quiz){
-  if (typeof key === 'number'){
-    console.log(`Answer ${key}: ${value}`)
-  }
-}
+// for (const [key, value] of quiz){
+//   if (typeof key === 'number'){
+//     console.log(`Answer ${key}: ${value}`)
+//   }
+// }
 
-const answer =Number( prompt('Your answer: '))
-console.log(answer)
-if (answer === quiz.get('correct')){
-  console.log(`${quiz.get(true)}`)
-}else {
-   console.log(`${quiz.get(false)}`)
-}
+// const answer =Number( prompt('Your answer: '))
+// console.log(answer)
+// if (answer === quiz.get('correct')){
+//   console.log(`${quiz.get(true)}`)
+// }else {
+//    console.log(`${quiz.get(false)}`)
+// }
 
 
 console.log([...quiz])
@@ -354,4 +354,29 @@ console.log(airline.slice(0,airline.lastIndexOf(' '))) //end value isnt included
 
 const CHecktMiddleSeat = (seat) => {
 // b and e are middle sear
+const seats = seat.slice(-1)
+if (seat.slice(-1) === 'B' || seat.slice(-1)==='E'){
+ console.log("Middlse Seat")
+}else {
+ console.log('Not Middle Seat')
 }
+}
+CHecktMiddleSeat('11R')
+
+// to capitalize 
+const passenger = "joNaS"
+
+const jed = passenger.slice(0,1).toUpperCase()+ passenger.slice(1).toLowerCase()
+console.log(jed)
+
+//.trim() is used to remove whitespace
+// replace and replaceall(methods) replace('door','gate') and it does just that use the replace
+// all for if theres mulitple of the stuff you wanna replace or place the word you wanna replace in eg 
+// replace(/door/g,'gate') and the g stands for global
+
+
+// .includes, . startswith give a boolean output 
+console.log('plane'.endsWith('g'))
+const str = "hello+world+how+are+you"
+
+console.log(str.split('+').join('8'))
