@@ -380,3 +380,19 @@ console.log('plane'.endsWith('g'))
 const str = "hello+world+how+are+you"
 
 console.log(str.split('+').join('8'))
+
+
+// capitalizing the first letter of each name
+
+const capitlizeName = function(name){
+  const se = [name]
+  const pw = se.slice(0,1).toUpperCase() + se.slice(1).toLowerCase()
+  const ww =pw.split(" ".join(' '))
+   console.log(ww)
+}
+
+
+capitlizeName('MIKE JOHN WICH ')
+
+const se = []
+console.log(typeof(se))
