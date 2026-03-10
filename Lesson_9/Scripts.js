@@ -319,7 +319,7 @@ if (answer === quiz.get('correct')){
 
 
 console.log([...quiz])
-
+// challenge 3
 
 const gameEvents = new Map([
   [17, '⚽️ GOAL'],
@@ -334,3 +334,16 @@ const gameEvents = new Map([
   [80, '⚽️ GOAL'],
   [92, '🔶 Yellow card'],
 ]);
+
+const event = [...new Set(gameEvents.values())]
+gameEvents.delete(64)
+console.log(event)
+console.log(`An event happened on average every 9 minutes`)
+
+const  airline  = "Tag Air ghana rig"
+const plane  = 'A320'
+console.log(plane[0])
+console.log(airline.indexOf('r')) // first occurence
+console.log(airline.lastIndexOf('r ')) // last occurence
+console.log(airline.slice(1)) 
+console.log(airline.slice(2,7)) //end value isnt included in the string 
