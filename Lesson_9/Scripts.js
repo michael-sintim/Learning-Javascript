@@ -385,14 +385,109 @@ console.log(str.split('+').join('8'))
 // capitalizing the first letter of each name
 
 const capitlizeName = function(name){
-  const se = [name]
-  const pw = se.slice(0,1).toUpperCase() + se.slice(1).toLowerCase()
-  const ww =pw.split(" ".join(' '))
-   console.log(ww)
+ const nameList = []
+const namesplit = name.split(' ')
+  for (const n of namesplit){
+
+    const v= nameList.push(n.slice(0,1).toUpperCase()+ n.slice(1).toLowerCase())
+    
+  }
+    const bw = nameList.join(' ')
+    return bw
+    
+ 
+  }
+
+
+
+
+
+// console.log(capitlizeName('van van vn'))
+
+
+// const CamelCase = (word) => {
+//   const lists = []
+//   const wordsplit = word.split(' ')
+//   for (const x of wordsplit){
+//     const cc_case = word[0].toLowerCase() + word[-1].toUpperCase()
+//     if (word.includes("_")){
+//       word.replace('_',"")
+      
+//     }
+//   }
+
+//   return wordsplit
+// } 
+// console.log(CamelCase('van_dikk'))
+
+// when you want to skip a  function parameter, you must set tha
+
+const flight = 'LH234'
+const mike = {
+  name :'mike sin',
+  passprt : 234548383999,
 }
 
+const checkIn = function(flightNum,passenger){
+  
+const flight = 'LH211'
+passenger.name = 'Mr. ' + passenger.name
+if (passenger.passprt===234548383999){alert ('checkIn')}
+else{
+  alert("get yo ass outta here look lass boy")
+}
+}
 
-capitlizeName('MIKE JOHN WICH ')
+//how passing argument wok as a value and as a number
+// first clss function vs higer order functionn 
 
-const se = []
-console.log(typeof(se))
+const greet = (gretting) => (name) => console.log(`${gretting} ${name}`)
+
+greet('hey')('denver')
+
+const lufthansa = {
+  airline: 'lufthansa',
+  iatacode: 'LH',
+  bookings: [],
+book(fligtNumber,name){
+    console.log( `${name} booked a seat on  ${this.airline} flight ${this.iatacode}${fligtNumber}`);
+    this.bookings.push({flight: `${this.iatacode} ${fligtNumber} ${name}`})
+}
+};
+
+lufthansa.book(249,'jonas themann')
+console.log(lufthansa)
+
+const eurowings = {
+  airline: 'eurowings',
+  iatacode: 'EW',
+  bookings: [],
+
+};
+const book = lufthansa.book
+
+
+// book(23, 'sara wilson')// doesnt work
+
+book.call(eurowings,23,'sara wiggins');
+console.log(eurowings)
+
+book.call(lufthansa,239, 'Mary cooper')
+
+// bind helps use ot manually set the this keyword 
+const bookEW = book.bind(eurowings)
+const bookLH = book.bind(lufthansa)
+bookEW(23,"lara thamspon ")
+
+const bookEW24 = book.bind(eurowings,24)
+bookEW24('miek morgan')
+
+
+const secureBooking =  function(){
+  let   passengerCOunt = 0;
+  return function(){
+    console.log(`${passengerCOunt} passengers`)
+  }
+}
+
+const booker = secureBooking()
