@@ -138,5 +138,102 @@ currencies.forEach(function(value,key,map){
 console.log(`${key} : ${value}`)
 })
 
+
+const calcDisplaybalance = function(movements){
+  const balance = movements.reduce((acc,mov) => acc+mov,0);
+  labelBalance.textContent = `${balance} EUR`
+
+}
+
+calcDisplaybalance(account1.movements)
+
+
+
+const calcDisplaysummary = function(movements){
+  const incomes = movements
+  .filter(mov => mov > 0)
+  .reduce((acc,mov) => acc+mov,0)
+   labelSumIn.textContent = `${incomes} EUR  `
+
+   const out =  movements
+  .filter(mov => mov < 0)
+  .reduce((acc,mov) => acc+mov,0)
+   labelSumOut.textContent = `${Math.abs(out)} EUR  `
+
+   const interests =  movements
+  .filter(mov => mov > 0)
+  .map(deposit => (deposit*1.2)/100)
+  .filter((int,i,arr) => {
+    console.log(arr)
+    return   int >=1 
+  })
+  .reduce((acc,mov) => acc+mov,0)
+   labelSumInterest.textContent = `${interests} EUR  `
+
+
+}
+
+calcDisplaysummary(account1.movements)
 // set  
 // has no keys and values  
+
+
+const checkDogs = function(dogsJulia,dogsKate)  {
+
+const dogsJuliacorr = dogsJulia.splice(0,3)
+const joinedData = [...dogsJuliacorr,...dogsKate]
+console.log(joinedData)
+
+joinedData.forEach(function(age,index){
+const over3= age > 3 ? console.log(`Dog number ${index+1} is an adult, and is ${age} years old`):
+console.log(`Dog number ${index+1} is still a puppy`)
+});
+
+};
+
+checkDogs([3,5,2,12,7],[4,1,15,8,3])
+
+// map filter reduce   
+
+const cart = [
+  { name: "Laptop", price: 1000, category: "electronics" },
+  { name: "T-Shirt", price: 20, category: "clothing" },
+  { name: "Headphones", price: 100, category: "electronics" },
+  { name: "Jeans", price: 50, category: "clothing" },
+  { name: "Mouse", price: 25, category: "electronics" }
+];
+
+const fil1 = cart.filter((x) => x.category==='electronics' )
+const mapp1 =  fil1.map((x) => x.price*1.1)
+const reduce1 = mapp1.reduce((x,y) => x+y,0)
+
+console.log(reduce1)
+
+// const calcAverageHuamanAge = function(ages){
+
+//   const conversion = ages.map((x) => x <= 2 ? 2* x : 16 + x *4)
+//   const under18 = conversion.filter((x) => x >= 18)
+
+  
+//   console.log(conversion)
+//   console.log(under18)
+//   const rr = under18.reduce((x,y,a,b) => x+y/b.length,0)
+//   console.log(rr) 
+  
+// }
+
+// calcAverageHuamanAge([5,2,4,1,15,8,3])
+
+
+// computing user names 
+
+// const user = 'tyler james williams'
+
+
+// const eurtousd =1.1
+// const totaldepositUsd = movements
+//   .filter(mov => mov > 0)
+//   .map(mov => mov*eurtousd)
+//   .reduce((acc,mov) => acc+mov,0)
+
+// console.log(totaldepositUsd)
