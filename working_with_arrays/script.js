@@ -237,3 +237,71 @@ console.log(reduce1)
 //   .reduce((acc,mov) => acc+mov,0)
 
 // console.log(totaldepositUsd)
+
+const www = [1,2,3,4,5]
+const ww = www.find((x) => x>3)
+console.log(ww)
+
+const breeds = [
+
+  {
+    breeds: 'German Shepherd',
+    averageWeight: 32,
+    activities: ['fetch','swimming']
+  }, 
+  {
+    breeds: 'Dalmatian',
+    averageWeight: 24,
+    activities: ['fetch','running','agility']
+  },
+   {
+    breeds: 'lindador',
+    averageWeight: 28,
+    activities: ['fetch','swimming']
+  },
+   {
+    breeds: 'Beagle',
+    averageWeight: 12,
+    activities: ['fetch','digging']
+  },
+   {
+    breeds: 'Bull dog',
+    averageWeight: 32,
+    activities: ['fetch','agility']
+  },  {
+    breeds: 'Husky',
+    averageWeight: 36,
+    activities: ['fetch','swimming']
+  }, 
+  {
+    breeds: 'Poodle',
+    averageWeight: 18,
+    activities: ['sleeping']
+  },
+];    
+
+
+
+const huskyWeight = breeds[5].averageWeight
+
+breeds.forEach(x => {
+  
+});
+console.log(allActivities)
+
+//number conversion 
+// parsing  
+// parsign a number from a string 
+// it accepts a so called argument called redis  
+// console.log(Number.parseInt('300.8px'))
+// console.log(Number.parseFloat('2.5rem'))
+// console.log(Number.isNaN (+'2.5rem'))
+
+// // numeric separator 
+// const mm = 284_3223_2323_323
+// console.log(BigInt(Number.MAX_SAFE_INTEGER)) 
+// console.log(new Date(2025, 2, 3, 12, 4).toISOString()) 
+
+
+
+//  setTimeout (() => console.log('mwahaha'),2000)
