@@ -283,11 +283,26 @@ const breeds = [
 
 
 const huskyWeight = breeds[5].averageWeight
-
-breeds.forEach(x => {
+const combinedArray = []
+ breeds.forEach( (value,index,array )=> {
+  // const ww =`${array[index].activities}`
+ const w = console.log([`${index}: ${array[index].activities}`])
+ combinedArray.push(w)
+ 
   
-});
-console.log(allActivities)
+}
+);
+
+console.log(combinedArray)
+const a = [...account1]
+a.sort((a,b) => {
+  
+})
+//.sort sorts from a to z , for strings
+
+
+
+
 
 //number conversion 
 // parsing  
